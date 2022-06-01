@@ -25,6 +25,15 @@ public class Banco {
 	public List<Empresa> getListaEmpresas() {
 		return Banco.listaEmpresas;
 	}
+	
+	public Empresa buscarEmpresa(Integer id) {
+		for (Empresa empresa : listaEmpresas) {
+			if(empresa.getId().equals(id)) {
+				return empresa;
+			}
+		}
+		return null;
+	}
 
 	public void adicionar(Empresa empresa) {
 		empresa.setId(chaveSequencial++);
@@ -43,5 +52,4 @@ public class Banco {
 			}
 		}	
 	}
-
 }
