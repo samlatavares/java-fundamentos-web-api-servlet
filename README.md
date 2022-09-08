@@ -8,6 +8,7 @@
 - Java 10
 - Tomcat 9
 - JSP
+- HTML
 
 ## How to run this project?
 - Clone this repository in your local machine
