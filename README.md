@@ -1,5 +1,9 @@
 # java-fundamentos-web-api-servlet
 
+<p align="center">
+	<span>English</span> | <a href="https://github.com/samlatavares/java-fundamentos-web-api-servlet/blob/main/translations/pt-br/README.md">Português</a>
+</p>
+
 ## What is this project?
 - This project was made during <a href="https://cursos.alura.com.br/course/servlets-fundamentos-programacao-web-java">this</a> Alura's course and is an example of a servlet using Tomcat.
 - It is a simple CRUD that allows the person that is using it to create, update, delete and read the companies data.
