@@ -5,10 +5,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
-<html>
+<html class="main">
 	<head>
 		<title>Lista de Empresas</title>
 	</head>
+	
+	<link rel="stylesheet" href="<c:url value="style.css"/>">
+	
 	<body>
 		
 		<c:if test="${not empty nomeEmpresa}">		

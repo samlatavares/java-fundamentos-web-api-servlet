@@ -7,6 +7,9 @@
 		<meta charset="ISO-8859-1">
 		<title>Nova Empresa</title>
 	</head>
+	
+	<link rel="stylesheet" href="<c:url value="style.css"/>">
+	
 	<body>		
 		<form action="${linkServletNovaEmpresa}" method="post">
 			Nome: <input type="text" name="nome"/>

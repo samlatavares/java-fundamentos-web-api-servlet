@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<html>
+<html class="main">
+	<link rel="stylesheet" href="<c:url value="style.css"/>">
 	<body>
 		<c:if test="${not empty nomeEmpresa}">		
 			Empresa ${ nomeEmpresa } cadastrada com sucesso!
