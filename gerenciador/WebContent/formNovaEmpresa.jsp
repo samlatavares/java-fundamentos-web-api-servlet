@@ -2,7 +2,7 @@
 <c:url value="/novaEmpresa" var="linkServletNovaEmpresa"/>
 
 <!DOCTYPE html>
-<html>
+<html class="main">
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Nova Empresa</title>

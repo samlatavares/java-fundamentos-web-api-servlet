@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="<c:url value="style.css"/>">
 	
 	<body>
-		
+	<h1>Lista de Empresas</h1>	
 		<c:if test="${not empty nomeEmpresa}">		
 			Empresa ${nomeEmpresa} cadastrada com sucesso!
 		</c:if>
@@ -21,8 +21,7 @@
 		<c:if test="${empty nomeEmpresa}">		
 			Nenhuma empresa cadastrada!
 		</c:if>
-		
-		<br/> Lista de empresas: <br/>
+			
 		<ul>
 			<c:forEach items="${empresas}" var="novaEmpresa">		
 				<li>
@@ -32,5 +31,13 @@
 				</li>
 			</c:forEach>		
 		</ul>
+		<input type="submit" value="Nova Empresa" onClick="openPage('formNovaEmpresa.jsp')"/>
 	</body>
 </html>
+
+<script type="text/javascript">
+ function openPage(pageURL)
+ {
+ 	window.location.href = pageURL;
+ }
+</script>

@@ -9,7 +9,7 @@ public class Banco {
 	private static List<Empresa> listaEmpresas = new ArrayList<>();
 	private static Integer chaveSequencial= 1;
 	
-	static {
+	/*static {
 		Empresa empresa = new Empresa();
 		empresa.setId(chaveSequencial++);
 		empresa.setNome("Alura");
@@ -20,7 +20,7 @@ public class Banco {
 		
 		listaEmpresas.add(empresa);
 		listaEmpresas.add(empresa2);
-	}
+	}*/
 	
 	public List<Empresa> getListaEmpresas() {
 		return Banco.listaEmpresas;
