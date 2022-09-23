@@ -9,11 +9,12 @@
 	</head>
 	
 	<link rel="stylesheet" href="<c:url value="style.css"/>">
-	
+	<h1>Criação de Empresa</h1>
 	<body>		
 		<form action="${linkServletNovaEmpresa}" method="post">
 			Nome: <input type="text" name="nome"/>
 			Data Abertura: <input type="text" name="data"/>
+			<br/>
 			<input type="submit"/>
 		</form>
 	</body>
