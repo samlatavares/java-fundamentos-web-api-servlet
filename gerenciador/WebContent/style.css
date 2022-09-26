@@ -1,11 +1,12 @@
 @charset "ISO-8859-1";
 
 .main {
+	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	background-color: #DBD5B2;
 	color: #54426B;
-	padding-top:10em;
-	align-content: center;
+	justify-content:center;
+	align-content: space-between;
 	align-items: center;
 	align-self:center;
 }
@@ -26,7 +27,7 @@ input[type=submit] {
 	background-color: #54426B;
 	color: #DBD5B2;
 	border-width:0px;
-	width:10%;
+	width:100%;
 	padding: 10px 10px;
 	margin: 8px 0;
 	border: none;

@@ -18,7 +18,7 @@
 			Empresa ${nomeEmpresa} cadastrada com sucesso!
 		</c:if>
 		
-		<c:if test="${empty nomeEmpresa}">		
+		<c:if test="${empty empresas}">		
 			Nenhuma empresa cadastrada!
 		</c:if>
 			
