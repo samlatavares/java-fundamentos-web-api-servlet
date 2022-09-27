@@ -5,6 +5,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,21 +24,32 @@ public class AlteraEmpresaServlet extends HttpServlet {
 		String idParam = request.getParameter("id");
 		Integer id = Integer.valueOf(idParam);
 		
-		Date dataAbertura = null;
-		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-			dataAbertura = sdf.parse(dataAberturaParam);
-		} catch (ParseException e) {
-			e.printStackTrace();
-			throw new ServletException(e);
+		if(nomeEmpresa != null && !nomeEmpresa.isEmpty() && dataAberturaParam != null && !dataAberturaParam.isEmpty()) {
+			Date dataAbertura = null;
+			try {
+				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+				dataAbertura = sdf.parse(dataAberturaParam);
+			} catch (ParseException e) {
+				e.printStackTrace();
+				throw new ServletException(e);
+			}
+			
+			Banco banco = new Banco();
+			Empresa empresa = banco.buscarEmpresa(id);
+			empresa.setDataAbertura(dataAbertura);
+			empresa.setNome(nomeEmpresa);
+			
+			response.sendRedirect("listaEmpresas");
+		} else {
+			ScriptEngine js = new ScriptEngineManager().getEngineByName("javascript");
+			try {
+				js.eval("alert(É obrigatório informar Nome e Data de Abertura!);");
+			} catch (ScriptException e) {
+				e.printStackTrace();
+			}
 		}
 		
-		Banco banco = new Banco();
-		Empresa empresa = banco.buscarEmpresa(id);
-		empresa.setDataAbertura(dataAbertura);
-		empresa.setNome(nomeEmpresa);
 		
-		response.sendRedirect("listaEmpresas");
 	}
 
 }

@@ -6,6 +6,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -47,6 +50,7 @@ public class NovaEmpresaServlet extends HttpServlet {
 //		request.setAttribute("nomeEmpresa", empresa.getNome());
 //		request.setAttribute("dataAbertura", empresa.getDataAbertura());
 //		rd.forward(request, response);
+		
 	}
 
 }

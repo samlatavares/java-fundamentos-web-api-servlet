@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="<c:url value="style.css"/>">
 	
 	<body>		
-		<form action="${linkServletNovaEmpresa}" method="post">
+		<form name="form" action="${linkServletNovaEmpresa}" method="post" onsubmit="return validateForm()">
 			Nome: <input type="text" name="nome" value="${empresa.nome}"/>
 			Data Abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>" />
 			<input type="hidden" name="id" value="${empresa.id }"/>
@@ -20,3 +20,14 @@
 		</form>
 	</body>
 </html>
+
+<script type="text/javascript">
+	function validateForm() {
+	  var nome = document.forms["form"]["nome"].value;
+	  var data = document.forms["form"]["nome"].value;
+	  if (nome == "" || data == "") {
+	    alert("É obrigatório informar Nome e Data Abertura!");
+	    return false;
+	  }
+	}
+</script>

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="<c:url value="style.css"/>">
 	<h1>Criação de Empresa</h1>
 	<body>		
-		<form action="${linkServletNovaEmpresa}" method="post">
+		<form name="form" action="${linkServletNovaEmpresa}" method="post" onSubmit="return validateForm()">
 			Nome: <input type="text" name="nome"/>
 			Data Abertura: <input type="text" name="data"/>
 			<br/>
@@ -19,3 +19,14 @@
 		</form>
 	</body>
 </html>
+
+<script type="text/javascript">
+	function validateForm() {
+	  var nome = document.forms["form"]["nome"].value;
+	  var data = document.forms["form"]["nome"].value;
+	  if (nome == "" || data == "") {
+	    alert("É obrigatório informar Nome e Data Abertura!");
+	    return false;
+	  }
+	}
+</script>
