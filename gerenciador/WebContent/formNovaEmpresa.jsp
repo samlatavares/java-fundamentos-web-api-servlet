@@ -13,13 +13,17 @@
 	<body>		
 		<form name="form" action="${linkServletNovaEmpresa}" method="post" onSubmit="return validateForm()">
 			Nome: <input type="text" name="nome"/>
-			Data Abertura: <input type="text" name="data"/>
+			Data Abertura: <input type="text" name="data" id="data"/>
 			<br/>
 			<input type="submit"/>
 		</form>
 	</body>
 </html>
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script type="text/javascript">
 	function validateForm() {
 	  var nome = document.forms["form"]["nome"].value;
@@ -29,4 +33,8 @@
 	    return false;
 	  }
 	}
+	
+	$( function() {
+	    $("#data").datepicker();
+	  } );
 </script>
