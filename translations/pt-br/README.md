@@ -4,9 +4,9 @@
 	<a href="https://github.com/samlatavares/java-fundamentos-web-api-servlet/blob/main/README.md">English</a> | <span>Português</span>
 </p>
 
-<img src="https://github.com/samlatavares/java-fundamentos-web-api-servlet/blob/main/images/criacao_empresa.jpg" alt="Company Creation Page."></img>
+<img src="https://github.com/samlatavares/java-fundamentos-web-api-servlet/blob/main/images/criacao_empresa.png" alt="Company Creation Page."></img>
 
-<img src="https://github.com/samlatavares/java-fundamentos-web-api-servlet/blob/main/images/lista_empresas.jpg" alt="Company List Page."></img>
+<img src="https://github.com/samlatavares/java-fundamentos-web-api-servlet/blob/main/images/lista_empresas.png" alt="Company List Page."></img>
 
 ## O que é esse projeto?
 - Esse projeto foi feito durante <a href="https://cursos.alura.com.br/course/servlets-fundamentos-programacao-web-java">esse</a> curso da Alura e é um exemplo de servlet utilizando o Tomcat.
